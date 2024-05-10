@@ -1,4 +1,4 @@
-package com.progressoft.induction.transactionsparser;
+package com.progressoft.induction.transactionsparser.transaction;
 
 import java.io.File;
 import java.util.List;

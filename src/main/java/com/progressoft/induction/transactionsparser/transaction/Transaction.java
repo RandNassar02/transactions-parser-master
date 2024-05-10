@@ -1,4 +1,6 @@
-package com.progressoft.induction.transactionsparser;
+package com.progressoft.induction.transactionsparser.transaction;
+
+import com.opencsv.bean.CsvBindByPosition;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,10 +9,13 @@ import java.util.Objects;
 
 @XmlRootElement
 public class Transaction {
-
+    @CsvBindByPosition(position = 0)
     private String description;
+    @CsvBindByPosition(position = 1)
     private String direction;
+    @CsvBindByPosition(position = 2)
     private BigDecimal amount;
+    @CsvBindByPosition(position = 3)
     private String currency;
 
     public String getDescription() {
