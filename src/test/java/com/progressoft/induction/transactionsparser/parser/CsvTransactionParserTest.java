@@ -17,14 +17,16 @@ class CsvTransactionParserTest extends TestTransactionParse {
         CsvTransactionParser csvParser=new CsvTransactionParser();
         List<Transaction> transactions = csvParser.parse(file);
         assertNotNull(transactions);
-        assertEquals(3, transactions.size());
+        assertEquals(4, transactions.size());
 
-        Transaction expectedTransaction1 = createExpectedTransaction("Cash withdrawal", "Debit", BigDecimal.valueOf(150), "JOD");
-        Transaction expectedTransaction2 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
-        Transaction expectedTransaction3 = createExpectedTransaction("Bill Payment", "Debit", BigDecimal.valueOf(20), "JOD");
+        Transaction expectedTransaction1 = createExpectedTransaction("CLIQ payment", "Debit", BigDecimal.valueOf(22.22), "JOD");
+        Transaction expectedTransaction2 = createExpectedTransaction("Cash withdrawal", "Debit", BigDecimal.valueOf(150), "JOD");
+        Transaction expectedTransaction3 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
+        Transaction expectedTransaction4 = createExpectedTransaction("Bill Payment", "Debit", BigDecimal.valueOf(20), "JOD");
         assertTransaction(expectedTransaction1, transactions.get(0));
         assertTransaction(expectedTransaction2, transactions.get(1));
         assertTransaction(expectedTransaction3, transactions.get(2));
+        assertTransaction(expectedTransaction4, transactions.get(3));
     }
 
 }

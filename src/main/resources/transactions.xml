@@ -1,13 +1,5 @@
 <TransactionList>
     <Transaction>
-        <Description> CLIQ Payment</Description>
-        <Direction>Debit</Direction>
-        <Amount>
-            <Value>20.2</Value>
-            <Currency>JOD</Currency>
-        </Amount>
-    </Transaction>
-    <Transaction>
         <Description>Cash withdrawal</Description>
         <Direction>Debit</Direction>
         <Amount>
