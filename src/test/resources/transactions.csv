@@ -1,4 +1,4 @@
-CLIQ payment,Debit,22.22,JOD
 Cash withdrawal,Debit,150,JOD
 Salary,Credit,1000,USD
+Cash deposit,Credit,22.22,JOD
 Bill Payment,Debit,20,JOD

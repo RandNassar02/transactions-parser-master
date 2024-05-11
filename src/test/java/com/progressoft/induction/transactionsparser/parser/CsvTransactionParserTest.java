@@ -19,9 +19,9 @@ class CsvTransactionParserTest extends TestTransactionParse {
         assertNotNull(transactions);
         assertEquals(4, transactions.size());
 
-        Transaction expectedTransaction1 = createExpectedTransaction("CLIQ payment", "Debit", BigDecimal.valueOf(22.22), "JOD");
-        Transaction expectedTransaction2 = createExpectedTransaction("Cash withdrawal", "Debit", BigDecimal.valueOf(150), "JOD");
-        Transaction expectedTransaction3 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
+        Transaction expectedTransaction1 = createExpectedTransaction("Cash withdrawal", "Debit", BigDecimal.valueOf(150), "JOD");
+        Transaction expectedTransaction2 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
+        Transaction expectedTransaction3 = createExpectedTransaction("Cash deposit", "Credit", BigDecimal.valueOf(22.22), "JOD");
         Transaction expectedTransaction4 = createExpectedTransaction("Bill Payment", "Debit", BigDecimal.valueOf(20), "JOD");
         assertTransaction(expectedTransaction1, transactions.get(0));
         assertTransaction(expectedTransaction2, transactions.get(1));

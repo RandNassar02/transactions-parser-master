@@ -17,14 +17,14 @@ class XmlTransactionParserTest extends TestTransactionParse {
         XmlTransactionParser xmlParser =new XmlTransactionParser();
         List<Transaction> transactions = xmlParser.parse(file);
         assertNotNull(transactions);
-        assertEquals(3, transactions.size());
+        assertEquals(4, transactions.size());
         Transaction expectedTransaction1 = createExpectedTransaction("Cash withdrawal", "Debit", BigDecimal.valueOf(150), "JOD");
-        Transaction expectedTransaction2 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
-        Transaction expectedTransaction3= createExpectedTransaction("Bill Payment", "Debit", BigDecimal.valueOf(20), "JOD");
-
+        Transaction expectedTransaction2= createExpectedTransaction("Cash deposit", "Credit", BigDecimal.valueOf(17.44), "JOD");
+        Transaction expectedTransaction3 = createExpectedTransaction("Salary", "Credit", BigDecimal.valueOf(1000), "USD");
+        Transaction expectedTransaction4= createExpectedTransaction("Bill Payment", "Debit", BigDecimal.valueOf(20), "JOD");
         assertTransaction(expectedTransaction1, transactions.get(0));
         assertTransaction(expectedTransaction2, transactions.get(1));
         assertTransaction(expectedTransaction3, transactions.get(2));
-
+        assertTransaction(expectedTransaction4, transactions.get(3));
     }
 }

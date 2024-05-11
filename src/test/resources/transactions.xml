@@ -8,6 +8,14 @@
         </Amount>
     </Transaction>
     <Transaction>
+        <Description>Cash deposit</Description>
+        <Direction>Credit</Direction>
+        <Amount>
+            <Value>17.44</Value>
+            <Currency>JOD</Currency>
+        </Amount>
+    </Transaction>
+    <Transaction>
         <Description>Salary</Description>
         <Direction>Credit</Direction>
         <Amount>
